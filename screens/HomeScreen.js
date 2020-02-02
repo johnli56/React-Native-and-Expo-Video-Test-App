@@ -44,21 +44,9 @@ export default function HomeScreen() {
           </View>
 
           <Text style={styles.getStartedText}>
-            Change this text and your app wil automatically reload.
+            Change this text and your app will automatically reload.
+            Updated. 6:05pm
           </Text>
-          <Video
-            source={{
-              uri:
-                "http://d2khmbg2rb4k4p.cloudfront.net/e3c815db-fae3-4774-b918-de97b9841910/mp4/workout_test_Mp4_Avc_Aac_16x9_1280x720p_24Hz_4.5Mbps_qvbr.mp4"
-            }}
-            rate={1.0}
-            volume={1.0}
-            isMuted={false}
-            resizeMode="cover"
-            shouldPlay={true}
-            isLooping={false}
-            style={{ width: 550, height: 300 }}
-          />
 
           <VideoPlayer
             videoProps={{
@@ -66,10 +54,14 @@ export default function HomeScreen() {
               resizeMode: Video.RESIZE_MODE_CONTAIN,
               source: {
                 uri:
-                  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                  "http://d2khmbg2rb4k4p.cloudfront.net/e3c815db-fae3-4774-b918-de97b9841910/mp4/workout_test_Mp4_Avc_Aac_16x9_1280x720p_24Hz_4.5Mbps_qvbr.mp4"
               }
             }}
             inFullscreen={false}
+            showControlsOnLoad={true}
+            showFullscreenButton={true}
+            width={400}
+            height={300}
           />
         </View>
 

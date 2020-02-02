@@ -18,7 +18,7 @@ export default function LinksScreen() {
               "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
           }
         }}
-        inFullscreen={true}
+        inFullscreen={false}
       />
     </ScrollView>
     
