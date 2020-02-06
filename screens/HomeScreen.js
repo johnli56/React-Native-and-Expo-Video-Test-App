@@ -16,6 +16,7 @@ import { MonoText } from "../components/StyledText";
 
 export default function HomeScreen() {
   return (
+    
     <View style={styles.container}>
       <ScrollView
         style={styles.container}
@@ -34,34 +35,28 @@ export default function HomeScreen() {
 
         <View style={styles.getStartedContainer}>
           <DevelopmentModeNotice />
-
           <Text style={styles.getStartedText}>Get started by opening</Text>
-
           <View
             style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           >
             <MonoText>screens/HomeScreen.js</MonoText>
           </View>
-
           <Text style={styles.getStartedText}>
-            Change this text and your app will automatically reload.
-            Updated. 6:05pm
+            Change this text and your app will automatically reload. Updated.
+            5:33pm
           </Text>
 
-          <VideoPlayer
-            videoProps={{
-              shouldPlay: true,
-              resizeMode: Video.RESIZE_MODE_CONTAIN,
-              source: {
-                uri:
-                  "http://d2khmbg2rb4k4p.cloudfront.net/e3c815db-fae3-4774-b918-de97b9841910/mp4/workout_test_Mp4_Avc_Aac_16x9_1280x720p_24Hz_4.5Mbps_qvbr.mp4"
-              }
+          <Video
+            source={{
+              uri:
+                "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1280_10MG.mp4"
             }}
-            inFullscreen={false}
-            showControlsOnLoad={true}
-            showFullscreenButton={true}
-            width={400}
-            height={300}
+            shouldPlay
+            useNativeControls
+            volume={0.1}
+            resizeMode="cover"
+            style={{ width: "100%", height: 300 }}
+
           />
         </View>
 
@@ -90,6 +85,24 @@ export default function HomeScreen() {
     </View>
   );
 }
+
+/*
+          <VideoPlayer
+            videoProps={{
+              shouldPlay: true,
+              resizeMode: Video.RESIZE_MODE_CONTAIN,
+              source: {
+                uri:
+                  "http://d2khmbg2rb4k4p.cloudfront.net/e3c815db-fae3-4774-b918-de97b9841910/mp4/workout_test_Mp4_Avc_Aac_16x9_1280x720p_24Hz_4.5Mbps_qvbr.mp4"
+              }
+            }}
+            inFullscreen={false}
+            showControlsOnLoad={true}
+            showFullscreenButton={true}
+            width={400}
+            height={300}
+          />
+          */
 
 HomeScreen.navigationOptions = {
   header: null
